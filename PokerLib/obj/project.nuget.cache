@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "WGH41vGREnL1tWQRhbMgF9N/QR2YefThutfNqfgNHfO3WploRVECVwhG0B4k+5l5vq0yKMZpB2nnabeodRxOAw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Paja\\Desktop\\Systemutveckling\\Poker\\PokerLib\\PokerLib.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Paja\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Paja\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
