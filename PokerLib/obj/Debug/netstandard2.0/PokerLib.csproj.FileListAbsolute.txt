@@ -7,3 +7,12 @@ C:\Users\Paja\Desktop\Systemutveckling\Poker\PokerLib\obj\Debug\netstandard2.0\P
 C:\Users\Paja\Desktop\Systemutveckling\Poker\PokerLib\obj\Debug\netstandard2.0\PokerLib.AssemblyInfo.cs
 C:\Users\Paja\Desktop\Systemutveckling\Poker\PokerLib\obj\Debug\netstandard2.0\PokerLib.dll
 C:\Users\Paja\Desktop\Systemutveckling\Poker\PokerLib\obj\Debug\netstandard2.0\PokerLib.pdb
+C:\Users\Mikae\Desktop\Programmerings övningar\Poker\PokerLib\bin\Debug\netstandard2.0\PokerLib.deps.json
+C:\Users\Mikae\Desktop\Programmerings övningar\Poker\PokerLib\bin\Debug\netstandard2.0\PokerLib.dll
+C:\Users\Mikae\Desktop\Programmerings övningar\Poker\PokerLib\bin\Debug\netstandard2.0\PokerLib.pdb
+C:\Users\Mikae\Desktop\Programmerings övningar\Poker\PokerLib\obj\Debug\netstandard2.0\PokerLib.csprojAssemblyReference.cache
+C:\Users\Mikae\Desktop\Programmerings övningar\Poker\PokerLib\obj\Debug\netstandard2.0\PokerLib.AssemblyInfoInputs.cache
+C:\Users\Mikae\Desktop\Programmerings övningar\Poker\PokerLib\obj\Debug\netstandard2.0\PokerLib.AssemblyInfo.cs
+C:\Users\Mikae\Desktop\Programmerings övningar\Poker\PokerLib\obj\Debug\netstandard2.0\PokerLib.csproj.CoreCompileInputs.cache
+C:\Users\Mikae\Desktop\Programmerings övningar\Poker\PokerLib\obj\Debug\netstandard2.0\PokerLib.dll
+C:\Users\Mikae\Desktop\Programmerings övningar\Poker\PokerLib\obj\Debug\netstandard2.0\PokerLib.pdb

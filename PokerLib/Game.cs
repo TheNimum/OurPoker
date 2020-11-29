@@ -19,6 +19,8 @@ namespace Poker.Lib
         public Deck deck = new Deck();
         public Graveyard graveyard;
         public Dealer dealer;
+        
+
 
         IPlayer[] IPokerGame.Players
         {
@@ -30,61 +32,82 @@ namespace Poker.Lib
             get;
             set;
         }
+
         public void RunGame()
         {
-            //en kallelse som gör en new deal.
-           
-                
-                NewDeal();
-                dealer.DealCards(Players);
-           
             
-            
+            while (true)
+            {
+                OneRunGame();
+                      
+            }
+
+        }
+        public bool OneRunGame()
+        {
+
+            NewDeal();
+            dealer.DealCards(Players);
+
             // välj kort som ska kastas
             // ersätt kortet som har kastats
             foreach (Player currentPlayer in Players)
             {
-            SelectCardsToDiscard(currentPlayer);
-            int drawAmount = currentPlayer.MakeaMove();
-            currentPlayer.PutToHand(deck.Drawcards(drawAmount));
-            RecievedReplacementCards(currentPlayer);
-            
-            
+                SelectCardsToDiscard(currentPlayer);
+                int drawAmount = currentPlayer.MakeaMove();
+                currentPlayer.PutToHand(deck.Drawcards(drawAmount));
+                currentPlayer.Hand.EvaluateHand();
+                RecievedReplacementCards(currentPlayer);
+
+
+            }
+            List<Player> winner = new List<Player>();
+            winner.Add(Players[0]);
+            for (int i = 1; i < Players.Length; i++)
+            {
+                int x = Players[i].InspectCards(winner[0].Hand);
+
+                if (x == 1)
+                {
+                    winner = new List<Player>();
+                    winner.Add(Players[i]);
+
+                }
+                else if (x == 0)
+                {
+                    winner.Add(Players[i]);
+
+                }
             }
 
-            
-            //4. vissa alla kort i händerna.
             ShowAllHands();
-          /*  Player [] winners = null;
-            if(winners.Length > 1)
+            if (winner.Count > 1)
             {
-                Draw();
+                Draw(winner.ToArray());
+
             }
-            else 
+            else
             {
-            Winner();
-
-            }*/
+                winner[0].wins++;
+                Winner(winner.ToArray()[0]);
+            }
             
-
-            //5. välj en vinnare. 
-
-
+            return true;
         }
-        
+
         public void Exit()
         {
-
+            System.Environment.Exit(1);
         }
         public void SaveGameAndExit(string fileName)
         {
             using (StreamWriter fileWriter = new StreamWriter(fileName))
             {
-                foreach(Player p in Players)
+                foreach (Player p in Players)
                 {
-                   fileWriter.WriteLine($"{p.Wins} {p.Name}"); 
+                    fileWriter.WriteLine($"{p.Wins} {p.Name}");
                 }
-                
+
             }
 
             System.Environment.Exit(1);
@@ -95,18 +118,18 @@ namespace Poker.Lib
             List<Player> players = new List<Player>();
             using (StreamReader fileReader = new StreamReader(fileName))
             {
-                
+
                 string line = fileReader.ReadLine();
-                while(line != null)
-                { 
-                    
-                   string[]words = line.Split(' ');
-                   string winText = words[0];
-                   string nameText = String.Join(" ",words.Skip(1));
-                    players.Add(new Player(nameText,int.Parse(winText))); 
+                while (line != null)
+                {
+
+                    string[] words = line.Split(' ');
+                    string winText = words[0];
+                    string nameText = String.Join(" ", words.Skip(1));
+                    players.Add(new Player(nameText, int.Parse(winText)));
                     line = fileReader.ReadLine();
                 }
-                
+
             }
             this.Players = players.ToArray();
             this.dealer = new Dealer();

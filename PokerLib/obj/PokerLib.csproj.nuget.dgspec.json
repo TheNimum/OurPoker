@@ -1,21 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Paja\\Desktop\\Systemutveckling\\Poker\\PokerLib\\PokerLib.csproj": {}
+    "C:\\Users\\Mikae\\Desktop\\Programmerings övningar\\Poker\\PokerLib\\PokerLib.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Paja\\Desktop\\Systemutveckling\\Poker\\PokerLib\\PokerLib.csproj": {
+    "C:\\Users\\Mikae\\Desktop\\Programmerings övningar\\Poker\\PokerLib\\PokerLib.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Paja\\Desktop\\Systemutveckling\\Poker\\PokerLib\\PokerLib.csproj",
+        "projectUniqueName": "C:\\Users\\Mikae\\Desktop\\Programmerings övningar\\Poker\\PokerLib\\PokerLib.csproj",
         "projectName": "PokerLib",
-        "projectPath": "C:\\Users\\Paja\\Desktop\\Systemutveckling\\Poker\\PokerLib\\PokerLib.csproj",
-        "packagesPath": "C:\\Users\\Paja\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Paja\\Desktop\\Systemutveckling\\Poker\\PokerLib\\obj\\",
+        "projectPath": "C:\\Users\\Mikae\\Desktop\\Programmerings övningar\\Poker\\PokerLib\\PokerLib.csproj",
+        "packagesPath": "C:\\Users\\Mikae\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Mikae\\Desktop\\Programmerings övningar\\Poker\\PokerLib\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Paja\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Mikae\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
@@ -55,7 +59,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

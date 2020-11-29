@@ -5,30 +5,28 @@ namespace Poker.Lib
 
     public class Player : IPlayer
     {
-        private Hand hand = new Hand(); 
-        
+        private Hand hand = new Hand();
 
-
+        public Hand Hand => hand;
         public string Name
         {
             get;
             private set;
         }
-         ICard[] IPlayer.Hand
+        ICard[] IPlayer.Hand
         {
             get => hand.Cards;
-            
-            
+
         }
         public HandType HandType
         {
-            get;
-            private set;
+            get { return hand.handType; }
+
         }
+        public int wins = 0;
         public int Wins
         {
-            get;
-            private set;
+            get => wins;
         }
         public ICard[] Discard
         {
@@ -38,8 +36,8 @@ namespace Poker.Lib
         public Player(string name, int wins)
         {
             Name = name;
-            Wins = wins;
-            
+            this.wins = wins;
+
         }
 
         public void PutToHand(Card[] cards)
@@ -49,11 +47,13 @@ namespace Poker.Lib
             {
                 hand.AddCard(card);
             }
+            
 
         }
-        public void InspectCards()
+        public int InspectCards(Hand otherHand)
         {
-             
+
+            return hand.compareTo(otherHand);
 
         }
         public int MakeaMove()
@@ -70,15 +70,11 @@ namespace Poker.Lib
 
             return discardAmount;
         }
-        public void Showdown()
-        {
-            
-
-        }
+        
         public Card[] GiveBackHand()
         {
             Card[] removedCards = (Card[])hand.Cards.Clone(); //skapar en klon av cards till något.
-            foreach(Card card in hand.Cards)
+            foreach (Card card in hand.Cards)
             {
                 hand.DiscardCard(card);
             }

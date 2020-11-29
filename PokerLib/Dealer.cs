@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Poker.Lib
 {
@@ -13,12 +14,11 @@ namespace Poker.Lib
         {
             deck = new Deck();
         }
-        public void shuffle()
-        {
-            deck.Shuffle();
-        }
+
         public void DealCards(Player[] players)
         {
+            deck.Shuffle();
+
 
             for (int j = 0; j < 5; j++)
             {
@@ -56,8 +56,17 @@ namespace Poker.Lib
 
 
         }
-       /*public Player[] Playerwithbesthand(Player[] players)
+        /*public Player[] Playerwithbesthand(Player[] players)
         {
+            var sortedPlayers = players.OrderByDescending(player => player.Hand);
+            
+            foreach (Player player in players)
+            {
+                player.InspectCards();
+            
+            }
+
+            return players;
 
         }*/
     }

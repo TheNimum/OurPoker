@@ -12,7 +12,7 @@ namespace Poker.Lib
         public static IPokerGame LoadGame(string fileName)
         {
 
-            //File.Open("FileName.txt", FileMode.Open);
+            //File.Open("fileName.txt", FileMode.Open);
             return new Game(fileName);
         }
     }

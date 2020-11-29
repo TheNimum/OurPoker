@@ -9,7 +9,7 @@ namespace Poker
 
         HandType HandType { get; }
 
-        int Wins { get; }
+        int Wins { get;}
 
         ICard[] Discard { set; }
     }
